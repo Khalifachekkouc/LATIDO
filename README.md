@@ -1,7 +1,5 @@
 # 🍔 LATIDO - Premium Digital Menu & Ordering System
 
-![Latido Preview](/public/menu/beef-burgers-1.png) *(Note: Add a real screenshot of your home page here)*
-
 ## 🚀 Overview
 Latido is a full-stack, high-performance digital menu web application built for a modern fast-food brand. It features a striking **Neo-Brutalist** design, complex product variant management, and a seamless direct-to-WhatsApp ordering system. 
 
