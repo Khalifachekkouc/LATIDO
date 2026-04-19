@@ -60,7 +60,7 @@ export default function CartBar() {
             <div className="max-h-72 overflow-y-auto divide-y-2 divide-black">
               {items.map((ci) => {
                 const baseP = ci.selectedVariant ? ci.selectedVariant.price : ci.item.basePrice;
-                const suppTotal = ci.selectedSupplements.reduce((a, s) => a + s.price, 0);
+                const suppTotal = ci.selectedSupplements ? ci.selectedSupplements.reduce((a, s) => a + s.price, 0) : 0;
                 const formuleP = ci.selectedFormule ? ci.selectedFormule.price : 0;
                 const lineTotal = (baseP + suppTotal + formuleP) * ci.qty;
 
@@ -72,9 +72,9 @@ export default function CartBar() {
                         <span className="price-tag ml-2 shrink-0">{lineTotal} DHS</span>
                       </div>
                       {ci.selectedVariant && (
-                        <p className="text-xs font-mono text-gray-500">{ci.selectedVariant.label}</p>
+                        <p className="text-xs font-mono text-gray-500">{ci.selectedVariant.name}</p>
                       )}
-                      {ci.selectedSupplements.length > 0 && (
+                      {ci.selectedSupplements && ci.selectedSupplements.length > 0 && (
                         <p className="text-xs font-mono text-gray-500">
                           + {ci.selectedSupplements.map((s) => s.label).join(", ")}
                         </p>
