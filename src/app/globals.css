@@ -1,0 +1,113 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-archivo);
+  --font-mono: var(--font-space-mono);
+  --font-heading: var(--font-archivo-black);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-yellow: #FFD400;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+}
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #000000;
+  --card: #FFFFFF;
+  --card-foreground: #000000;
+  --popover: #FFFFFF;
+  --popover-foreground: #000000;
+  --primary: #FFD400;
+  --primary-foreground: #000000;
+  --secondary: #000000;
+  --secondary-foreground: #FFD400;
+  --muted: #F5F5F0;
+  --muted-foreground: #555555;
+  --accent: #FFD400;
+  --accent-foreground: #000000;
+  --destructive: #FF2222;
+  --border: #000000;
+  --input: #000000;
+  --ring: #FFD400;
+  --radius: 0px;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #FFD400;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #FFD400;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #000000;
+  --sidebar-ring: #FFD400;
+}
+
+@layer base {
+  * {
+    @apply border-black outline-ring/50;
+  }
+  body {
+    @apply bg-white text-black;
+    font-family: var(--font-archivo), sans-serif;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-archivo-black), sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #fff; }
+::-webkit-scrollbar-thumb { background: #FFD400; border: 2px solid #000; }
+
+/* Utility Classes */
+.brut-shadow {
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+.brut-shadow-sm {
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+.brut-shadow-yellow {
+  box-shadow: 6px 6px 0px 0px #FFD400;
+}
+.brut-border {
+  border: 2px solid #000000;
+}
+.brut-border-thick {
+  border: 4px solid #000000;
+}
+.price-tag {
+  font-family: var(--font-space-mono), monospace;
+  font-weight: 700;
+}
